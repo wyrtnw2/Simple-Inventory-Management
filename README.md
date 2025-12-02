@@ -1,3 +1,4 @@
+> --------------------------------------------------------------------------------------------------------------------------------
 # Description/Описание
 > **Functional:**
 >> 1. Nomenclature: a product directory with the article, name, category, unit of measurement, and minimum balance.
