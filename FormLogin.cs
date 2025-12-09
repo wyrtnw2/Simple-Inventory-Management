@@ -17,6 +17,7 @@ namespace Simple_Inventory_Management
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            textBoxPassword.UseSystemPasswordChar = true;
         }
         
         private void FormLogin_Load(object sender, EventArgs e)
@@ -36,6 +37,10 @@ namespace Simple_Inventory_Management
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+        }
+
+        private void ButtonSingIn_Click(object sender, EventArgs e)
+        {
             string username = textBoxLogin.Text;
             string password = textBoxPassword.Text;
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-H77ER4U\SQLEXPRESS;Initial Catalog=SimpleInventoryManagement;Integrated Security=True");
@@ -54,23 +59,37 @@ namespace Simple_Inventory_Management
                 {
                     if (role == 1)
                     {
-                        MessageBox.Show("Вы успешно вошли как менеджер!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You have successfully logged in as a manager!", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FormManager manager = new FormManager();
                         manager.Show();
                         this.Hide();
                     }
                     else if (role == 2)
                     {
-                        MessageBox.Show("Вы успешно вошли как кладовщик!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You have successfully logged in as a storekeeper!", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FormStorekeeper storekeeper = new FormStorekeeper();
                         storekeeper.Show();
                         this.Hide();
                     }
                     else if (role == 3)
                     {
-                        MessageBox.Show("Вы успешно вошли как бухгалтер!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You have successfully logged in as a storekeeper!", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FormAccountant accountant = new FormAccountant();
                         accountant.Show();
+                        this.Hide();
+                    }
+                    else if (role == 4)
+                    {
+                        MessageBox.Show("You have successfully logged in as an administrator!", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormAdmin admin = new FormAdmin();
+                        admin.Show();
+                        this.Hide();
+                    }
+                    else if (role == 5)
+                    {
+                        MessageBox.Show("You have successfully logged in as an salesman", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormSalesman salesman = new FormSalesman();
+                        salesman.Show();
                         this.Hide();
                     }
                 }
@@ -85,6 +104,24 @@ namespace Simple_Inventory_Management
             {
                 MessageBox.Show("Отказано в доступе! Неверный логин, пароль или вы заблокированы в системе", "Аккаунт заблокирован!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+        }
+
+        private void rjToggleButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!rjToggleButton1.Checked)
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void linkLabelFaq_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Latest information and guidance: github.com/wyrtnw2/Simple-Inventory-Management", "Information.", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

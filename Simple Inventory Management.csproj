@@ -46,11 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormAccountant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAccountant.Designer.cs">
       <DependentUpon>FormAccountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -64,6 +73,30 @@
     <Compile Include="FormManager.Designer.cs">
       <DependentUpon>FormManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormManagerCatigories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagerCatigories.Designer.cs">
+      <DependentUpon>FormManagerCatigories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManagerStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagerStocks.Designer.cs">
+      <DependentUpon>FormManagerStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMnagerProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMnagerProducts.Designer.cs">
+      <DependentUpon>FormMnagerProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSalesman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalesman.Designer.cs">
+      <DependentUpon>FormSalesman.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStorekeeper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +105,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RJToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SimpleInventoryManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SimpleInventoryManagementDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManagerCatigories.resx">
+      <DependentUpon>FormManagerCatigories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManagerStocks.resx">
+      <DependentUpon>FormManagerStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMnagerProducts.resx">
+      <DependentUpon>FormMnagerProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +146,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SimpleInventoryManagementDataSet.xsc">
+      <DependentUpon>SimpleInventoryManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SimpleInventoryManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SimpleInventoryManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SimpleInventoryManagementDataSet.xss">
+      <DependentUpon>SimpleInventoryManagementDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
