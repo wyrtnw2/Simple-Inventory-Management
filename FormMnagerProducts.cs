@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DGVPrinterHelper;
+using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace Simple_Inventory_Management
 {
@@ -20,12 +14,12 @@ namespace Simple_Inventory_Management
 
         private void ButtonClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            productsViewBindingSource.Filter = "";
         }
 
         private void FormMnagerProducts_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "simpleInventoryManagementDataSet.ProductsView". При необходимости она может быть перемещена или удалена.
+            // sss
             this.productsViewTableAdapter.Fill(this.simpleInventoryManagementDataSet.ProductsView);
 
         }
@@ -47,7 +41,13 @@ namespace Simple_Inventory_Management
 
         private void ButtonFIllter_Click(object sender, EventArgs e)
         {
-            productsViewBindingSource.Filter = "CategoryName = '" + comboBoxFiltering.Text + "'";
+            productsViewBindingSource.Filter = "CategoryName = '" + comboBox.Text + "'";
+        }
+
+        private void rjButtonREP_Click(object sender, EventArgs e)
+        {
+            DGVPrinter dgvPrinter = new DGVPrinter();
+            dgvPrinter.CreateReport("Отчет по продуктам", productsViewDataGridView);
         }
     }
 }

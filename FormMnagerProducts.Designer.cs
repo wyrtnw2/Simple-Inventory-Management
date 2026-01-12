@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
             this.productsViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsViewTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.ProductsViewTableAdapter();
@@ -51,7 +51,8 @@
             this.labelFiltering = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.comboBoxFiltering = new System.Windows.Forms.ComboBox();
+            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.rjButtonREP = new Simple_Inventory_Management.RJButton();
             this.ButtonFIllter = new Simple_Inventory_Management.RJButton();
             this.ButtonFind = new Simple_Inventory_Management.RJButton();
             this.ButtonClose = new Simple_Inventory_Management.RJButton();
@@ -120,14 +121,14 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.productsViewDataGridView.DataSource = this.productsViewBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Orbitron Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.productsViewDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Orbitron Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.productsViewDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.productsViewDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.productsViewDataGridView.EnableHeadersVisualStyles = false;
             this.productsViewDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
@@ -237,29 +238,29 @@
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.labelSearch.Location = new System.Drawing.Point(12, 337);
+            this.labelSearch.Location = new System.Drawing.Point(16, 346);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(69, 17);
+            this.labelSearch.Size = new System.Drawing.Size(82, 17);
             this.labelSearch.TabIndex = 3;
-            this.labelSearch.Text = "Search:";
+            this.labelSearch.Text = "SEARCH:";
             // 
             // labelFiltering
             // 
             this.labelFiltering.AutoSize = true;
             this.labelFiltering.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFiltering.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.labelFiltering.Location = new System.Drawing.Point(12, 365);
+            this.labelFiltering.Location = new System.Drawing.Point(12, 378);
             this.labelFiltering.Name = "labelFiltering";
-            this.labelFiltering.Size = new System.Drawing.Size(74, 17);
+            this.labelFiltering.Size = new System.Drawing.Size(96, 17);
             this.labelFiltering.TabIndex = 4;
-            this.labelFiltering.Text = "Filtering:";
+            this.labelFiltering.Text = "FILTERING:";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.panel2.Location = new System.Drawing.Point(87, 353);
+            this.panel2.Location = new System.Drawing.Point(114, 362);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 1);
+            this.panel2.Size = new System.Drawing.Size(198, 1);
             this.panel2.TabIndex = 30;
             // 
             // textBoxSearch
@@ -268,18 +269,18 @@
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.textBoxSearch.Location = new System.Drawing.Point(87, 334);
+            this.textBoxSearch.Location = new System.Drawing.Point(114, 343);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(226, 17);
+            this.textBoxSearch.Size = new System.Drawing.Size(198, 17);
             this.textBoxSearch.TabIndex = 31;
             // 
-            // comboBoxFiltering
+            // comboBox
             // 
-            this.comboBoxFiltering.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.comboBoxFiltering.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFiltering.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.comboBoxFiltering.FormattingEnabled = true;
-            this.comboBoxFiltering.Items.AddRange(new object[] {
+            this.comboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
+            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Items.AddRange(new object[] {
             "Электроника",
             "Компьютеры и ноутбуки",
             "Комплектующие для ПК",
@@ -294,10 +295,31 @@
             "Мебель",
             "Продукты питания",
             "Напитки"});
-            this.comboBoxFiltering.Location = new System.Drawing.Point(87, 360);
-            this.comboBoxFiltering.Name = "comboBoxFiltering";
-            this.comboBoxFiltering.Size = new System.Drawing.Size(226, 24);
-            this.comboBoxFiltering.TabIndex = 32;
+            this.comboBox.Location = new System.Drawing.Point(115, 378);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(197, 24);
+            this.comboBox.TabIndex = 35;
+            // 
+            // rjButtonREP
+            // 
+            this.rjButtonREP.BackColor = System.Drawing.Color.Transparent;
+            this.rjButtonREP.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjButtonREP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButtonREP.BorderRadius = 6;
+            this.rjButtonREP.BorderSize = 2;
+            this.rjButtonREP.FlatAppearance.BorderSize = 0;
+            this.rjButtonREP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
+            this.rjButtonREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButtonREP.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButtonREP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButtonREP.Location = new System.Drawing.Point(421, 336);
+            this.rjButtonREP.Name = "rjButtonREP";
+            this.rjButtonREP.Size = new System.Drawing.Size(97, 32);
+            this.rjButtonREP.TabIndex = 36;
+            this.rjButtonREP.Text = "REPORT";
+            this.rjButtonREP.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButtonREP.UseVisualStyleBackColor = false;
+            this.rjButtonREP.Click += new System.EventHandler(this.rjButtonREP_Click);
             // 
             // ButtonFIllter
             // 
@@ -310,9 +332,9 @@
             this.ButtonFIllter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFIllter.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFIllter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.Location = new System.Drawing.Point(319, 365);
+            this.ButtonFIllter.Location = new System.Drawing.Point(318, 371);
             this.ButtonFIllter.Name = "ButtonFIllter";
-            this.ButtonFIllter.Size = new System.Drawing.Size(97, 20);
+            this.ButtonFIllter.Size = new System.Drawing.Size(97, 32);
             this.ButtonFIllter.TabIndex = 34;
             this.ButtonFIllter.Text = "FILLTER";
             this.ButtonFIllter.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
@@ -330,9 +352,9 @@
             this.ButtonFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFind.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFind.Location = new System.Drawing.Point(319, 334);
+            this.ButtonFind.Location = new System.Drawing.Point(318, 336);
             this.ButtonFind.Name = "ButtonFind";
-            this.ButtonFind.Size = new System.Drawing.Size(97, 20);
+            this.ButtonFind.Size = new System.Drawing.Size(97, 32);
             this.ButtonFind.TabIndex = 33;
             this.ButtonFind.Text = "FIND";
             this.ButtonFind.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
@@ -344,18 +366,18 @@
             this.ButtonClose.BackColor = System.Drawing.Color.Transparent;
             this.ButtonClose.BackgroundColor = System.Drawing.Color.Transparent;
             this.ButtonClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonClose.BorderRadius = 10;
+            this.ButtonClose.BorderRadius = 6;
             this.ButtonClose.BorderSize = 2;
             this.ButtonClose.FlatAppearance.BorderSize = 0;
             this.ButtonClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
             this.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonClose.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonClose.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonClose.Location = new System.Drawing.Point(449, 342);
+            this.ButtonClose.Location = new System.Drawing.Point(421, 371);
             this.ButtonClose.Name = "ButtonClose";
-            this.ButtonClose.Size = new System.Drawing.Size(150, 40);
+            this.ButtonClose.Size = new System.Drawing.Size(97, 32);
             this.ButtonClose.TabIndex = 0;
-            this.ButtonClose.Text = "CLOSE";
+            this.ButtonClose.Text = "CLEAR";
             this.ButtonClose.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonClose.UseVisualStyleBackColor = false;
             this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
@@ -365,10 +387,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.ClientSize = new System.Drawing.Size(611, 394);
+            this.ClientSize = new System.Drawing.Size(611, 413);
+            this.Controls.Add(this.rjButtonREP);
+            this.Controls.Add(this.comboBox);
             this.Controls.Add(this.ButtonFIllter);
             this.Controls.Add(this.ButtonFind);
-            this.Controls.Add(this.comboBoxFiltering);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelFiltering);
@@ -411,8 +434,9 @@
         private System.Windows.Forms.Label labelFiltering;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.ComboBox comboBoxFiltering;
         private RJButton ButtonFind;
         private RJButton ButtonFIllter;
+        private System.Windows.Forms.ComboBox comboBox;
+        private RJButton rjButtonREP;
     }
 }

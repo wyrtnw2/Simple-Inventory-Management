@@ -11,20 +11,19 @@ using System.Windows.Forms;
 
 namespace Simple_Inventory_Management
 {
-    public partial class FormManagerStocks : Form
+    public partial class FormAdminUnit : Form
     {
-        public FormManagerStocks()
+        public FormAdminUnit()
         {
             InitializeComponent();
         }
 
-        private void FormManagerStocks_Load(object sender, EventArgs e)
+        private void FormAdminUnit_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "simpleInventoryManagementDataSet.Stock". При необходимости она может быть перемещена или удалена.
-            this.stockTableAdapter.Fill(this.simpleInventoryManagementDataSet.Stock);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "simpleInventoryManagementDataSet.Units". При необходимости она может быть перемещена или удалена.
+            this.unitsTableAdapter.Fill(this.simpleInventoryManagementDataSet.Units);
 
         }
-
         private void ButtonFind_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < productsViewDataGridView.RowCount; i++)
@@ -40,31 +39,32 @@ namespace Simple_Inventory_Management
             }
         }
 
-        private void ButtonFIllter_Click(object sender, EventArgs e)
-        {
-            stockBindingSource.Filter = "CategoryName = '" + comboBox.Text + "'";
-        }
-
         private void rjButtonREP_Click(object sender, EventArgs e)
         {
             DGVPrinter dgvPrinter = new DGVPrinter();
             dgvPrinter.CreateReport("Отчет по категориям", productsViewDataGridView);
         }
 
-        private void ButtonClose_Click(object sender, EventArgs e)
+        private void ButtonFIllter_Click(object sender, EventArgs e)
         {
-            stockBindingSource.Filter = "";
+            unitsBindingSource.Filter = "CategoryName = '" + comboBox.Text + "'";
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            unitsBindingSource.AddNew();
         }
 
         private void rjButtonSave_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.stockBindingSource.EndEdit();
+            this.unitsBindingSource.EndEdit();
         }
 
-        private void rjButton2_Click(object sender, EventArgs e)
+        private void ButtonClose_Click(object sender, EventArgs e)
         {
-            stockBindingSource.AddNew();
+            unitsBindingSource.Filter = "";
+
         }
     }
 }

@@ -11,20 +11,19 @@ using System.Windows.Forms;
 
 namespace Simple_Inventory_Management
 {
-    public partial class FormManagerStocks : Form
+    public partial class FormAdminRoles : Form
     {
-        public FormManagerStocks()
+        public FormAdminRoles()
         {
             InitializeComponent();
         }
 
-        private void FormManagerStocks_Load(object sender, EventArgs e)
+        private void FormAdminRoles_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "simpleInventoryManagementDataSet.Stock". При необходимости она может быть перемещена или удалена.
-            this.stockTableAdapter.Fill(this.simpleInventoryManagementDataSet.Stock);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "simpleInventoryManagementDataSet.Roles". При необходимости она может быть перемещена или удалена.
+            this.rolesTableAdapter.Fill(this.simpleInventoryManagementDataSet.Roles);
 
         }
-
         private void ButtonFind_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < productsViewDataGridView.RowCount; i++)
@@ -40,31 +39,32 @@ namespace Simple_Inventory_Management
             }
         }
 
-        private void ButtonFIllter_Click(object sender, EventArgs e)
-        {
-            stockBindingSource.Filter = "CategoryName = '" + comboBox.Text + "'";
-        }
-
         private void rjButtonREP_Click(object sender, EventArgs e)
         {
             DGVPrinter dgvPrinter = new DGVPrinter();
             dgvPrinter.CreateReport("Отчет по категориям", productsViewDataGridView);
         }
 
-        private void ButtonClose_Click(object sender, EventArgs e)
+        private void ButtonFIllter_Click(object sender, EventArgs e)
         {
-            stockBindingSource.Filter = "";
+            rolesBindingSource.Filter = "CategoryName = '" + comboBox.Text + "'";
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            rolesBindingSource.AddNew();
         }
 
         private void rjButtonSave_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.stockBindingSource.EndEdit();
+            this.rolesBindingSource.EndEdit();
         }
 
-        private void rjButton2_Click(object sender, EventArgs e)
+        private void ButtonClose_Click(object sender, EventArgs e)
         {
-            stockBindingSource.AddNew();
+            rolesBindingSource.Filter = "";
+
         }
     }
 }

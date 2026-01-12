@@ -1,6 +1,6 @@
 ﻿namespace Simple_Inventory_Management
 {
-    partial class FormManagerStocks
+    partial class FormAdminDocType
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.productsViewDataGridView = new System.Windows.Forms.DataGridView();
-            this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
-            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.StockTableAdapter();
-            this.stockIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.warehouseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservedQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rjButtonSave = new Simple_Inventory_Management.RJButton();
             this.rjButton2 = new Simple_Inventory_Management.RJButton();
-            this.rjButtonREP = new Simple_Inventory_Management.RJButton();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.ButtonFIllter = new Simple_Inventory_Management.RJButton();
             this.ButtonFind = new Simple_Inventory_Management.RJButton();
@@ -51,97 +39,24 @@
             this.labelFiltering = new System.Windows.Forms.Label();
             this.labelSearch = new System.Windows.Forms.Label();
             this.ButtonClose = new Simple_Inventory_Management.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).BeginInit();
+            this.usersTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
+            this.documentTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.documentTypesTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.DocumentTypesTableAdapter();
+            this.tableAdapterManager = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.TableAdapterManager();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentTypesDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentTypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentTypesDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productsViewDataGridView
-            // 
-            this.productsViewDataGridView.AllowUserToAddRows = false;
-            this.productsViewDataGridView.AllowUserToDeleteRows = false;
-            this.productsViewDataGridView.AllowUserToOrderColumns = true;
-            this.productsViewDataGridView.AllowUserToResizeColumns = false;
-            this.productsViewDataGridView.AllowUserToResizeRows = false;
-            this.productsViewDataGridView.AutoGenerateColumns = false;
-            this.productsViewDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.productsViewDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productsViewDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.productsViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stockIdDataGridViewTextBoxColumn,
-            this.warehouseIdDataGridViewTextBoxColumn,
-            this.productIdDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.lastUpdatedDataGridViewTextBoxColumn,
-            this.reservedQuantityDataGridViewTextBoxColumn});
-            this.productsViewDataGridView.DataSource = this.stockBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Orbitron Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.productsViewDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
-            this.productsViewDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productsViewDataGridView.EnableHeadersVisualStyles = false;
-            this.productsViewDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.productsViewDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.productsViewDataGridView.Name = "productsViewDataGridView";
-            this.productsViewDataGridView.Size = new System.Drawing.Size(611, 305);
-            this.productsViewDataGridView.TabIndex = 4;
-            // 
-            // simpleInventoryManagementDataSet
-            // 
-            this.simpleInventoryManagementDataSet.DataSetName = "SimpleInventoryManagementDataSet";
-            this.simpleInventoryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stockBindingSource
-            // 
-            this.stockBindingSource.DataMember = "Stock";
-            this.stockBindingSource.DataSource = this.simpleInventoryManagementDataSet;
-            // 
-            // stockTableAdapter
-            // 
-            this.stockTableAdapter.ClearBeforeFill = true;
-            // 
-            // stockIdDataGridViewTextBoxColumn
-            // 
-            this.stockIdDataGridViewTextBoxColumn.DataPropertyName = "StockId";
-            this.stockIdDataGridViewTextBoxColumn.HeaderText = "StockId";
-            this.stockIdDataGridViewTextBoxColumn.Name = "stockIdDataGridViewTextBoxColumn";
-            this.stockIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // warehouseIdDataGridViewTextBoxColumn
-            // 
-            this.warehouseIdDataGridViewTextBoxColumn.DataPropertyName = "WarehouseId";
-            this.warehouseIdDataGridViewTextBoxColumn.HeaderText = "WarehouseId";
-            this.warehouseIdDataGridViewTextBoxColumn.Name = "warehouseIdDataGridViewTextBoxColumn";
-            // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // lastUpdatedDataGridViewTextBoxColumn
-            // 
-            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "LastUpdated";
-            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "LastUpdated";
-            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
-            // 
-            // reservedQuantityDataGridViewTextBoxColumn
-            // 
-            this.reservedQuantityDataGridViewTextBoxColumn.DataPropertyName = "ReservedQuantity";
-            this.reservedQuantityDataGridViewTextBoxColumn.HeaderText = "ReservedQuantity";
-            this.reservedQuantityDataGridViewTextBoxColumn.Name = "reservedQuantityDataGridViewTextBoxColumn";
             // 
             // rjButtonSave
             // 
@@ -155,10 +70,10 @@
             this.rjButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonSave.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonSave.Location = new System.Drawing.Point(496, 308);
+            this.rjButtonSave.Location = new System.Drawing.Point(393, 335);
             this.rjButtonSave.Name = "rjButtonSave";
             this.rjButtonSave.Size = new System.Drawing.Size(97, 32);
-            this.rjButtonSave.TabIndex = 58;
+            this.rjButtonSave.TabIndex = 70;
             this.rjButtonSave.Text = "SAVE";
             this.rjButtonSave.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.rjButtonSave.UseVisualStyleBackColor = false;
@@ -176,35 +91,14 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButton2.Location = new System.Drawing.Point(496, 343);
+            this.rjButton2.Location = new System.Drawing.Point(496, 335);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(97, 32);
-            this.rjButton2.TabIndex = 57;
+            this.rjButton2.TabIndex = 69;
             this.rjButton2.Text = "ADD";
             this.rjButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
-            // 
-            // rjButtonREP
-            // 
-            this.rjButtonREP.BackColor = System.Drawing.Color.Transparent;
-            this.rjButtonREP.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButtonREP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonREP.BorderRadius = 6;
-            this.rjButtonREP.BorderSize = 2;
-            this.rjButtonREP.FlatAppearance.BorderSize = 0;
-            this.rjButtonREP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.rjButtonREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButtonREP.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButtonREP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonREP.Location = new System.Drawing.Point(393, 309);
-            this.rjButtonREP.Name = "rjButtonREP";
-            this.rjButtonREP.Size = new System.Drawing.Size(97, 32);
-            this.rjButtonREP.TabIndex = 56;
-            this.rjButtonREP.Text = "REPORT";
-            this.rjButtonREP.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonREP.UseVisualStyleBackColor = false;
-            this.rjButtonREP.Click += new System.EventHandler(this.rjButtonREP_Click);
             // 
             // comboBox
             // 
@@ -213,24 +107,13 @@
             this.comboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
-            "Электроника",
-            "Компьютеры и ноутбуки",
-            "Комплектующие для ПК",
-            "Периферия",
-            "Офисная техника",
-            "Принтеры и МФУ",
-            "Канцелярия",
-            "Бумажная продукция",
-            "Письменные принадлежности",
-            "Хозяйственные товары",
-            "Бытовая химия",
-            "Мебель",
-            "Продукты питания",
-            "Напитки"});
-            this.comboBox.Location = new System.Drawing.Point(111, 351);
+            "=",
+            "-",
+            "+"});
+            this.comboBox.Location = new System.Drawing.Point(111, 377);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(173, 24);
-            this.comboBox.TabIndex = 55;
+            this.comboBox.TabIndex = 67;
             // 
             // ButtonFIllter
             // 
@@ -243,10 +126,10 @@
             this.ButtonFIllter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFIllter.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFIllter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.Location = new System.Drawing.Point(290, 344);
+            this.ButtonFIllter.Location = new System.Drawing.Point(290, 370);
             this.ButtonFIllter.Name = "ButtonFIllter";
             this.ButtonFIllter.Size = new System.Drawing.Size(97, 32);
-            this.ButtonFIllter.TabIndex = 54;
+            this.ButtonFIllter.TabIndex = 66;
             this.ButtonFIllter.Text = "FILLTER";
             this.ButtonFIllter.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonFIllter.UseVisualStyleBackColor = false;
@@ -263,10 +146,10 @@
             this.ButtonFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFind.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFind.Location = new System.Drawing.Point(290, 309);
+            this.ButtonFind.Location = new System.Drawing.Point(290, 335);
             this.ButtonFind.Name = "ButtonFind";
             this.ButtonFind.Size = new System.Drawing.Size(97, 32);
-            this.ButtonFind.TabIndex = 53;
+            this.ButtonFind.TabIndex = 65;
             this.ButtonFind.Text = "FIND";
             this.ButtonFind.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonFind.UseVisualStyleBackColor = false;
@@ -275,10 +158,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.panel2.Location = new System.Drawing.Point(110, 335);
+            this.panel2.Location = new System.Drawing.Point(110, 361);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(174, 1);
-            this.panel2.TabIndex = 51;
+            this.panel2.TabIndex = 63;
             // 
             // textBoxSearch
             // 
@@ -286,20 +169,20 @@
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.textBoxSearch.Location = new System.Drawing.Point(110, 316);
+            this.textBoxSearch.Location = new System.Drawing.Point(110, 342);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(174, 17);
-            this.textBoxSearch.TabIndex = 52;
+            this.textBoxSearch.TabIndex = 64;
             // 
             // labelFiltering
             // 
             this.labelFiltering.AutoSize = true;
             this.labelFiltering.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFiltering.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.labelFiltering.Location = new System.Drawing.Point(8, 351);
+            this.labelFiltering.Location = new System.Drawing.Point(8, 377);
             this.labelFiltering.Name = "labelFiltering";
             this.labelFiltering.Size = new System.Drawing.Size(96, 17);
-            this.labelFiltering.TabIndex = 50;
+            this.labelFiltering.TabIndex = 62;
             this.labelFiltering.Text = "FILTERING:";
             // 
             // labelSearch
@@ -307,10 +190,10 @@
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.labelSearch.Location = new System.Drawing.Point(12, 319);
+            this.labelSearch.Location = new System.Drawing.Point(12, 345);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(82, 17);
-            this.labelSearch.TabIndex = 49;
+            this.labelSearch.TabIndex = 61;
             this.labelSearch.Text = "SEARCH:";
             // 
             // ButtonClose
@@ -325,24 +208,121 @@
             this.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonClose.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonClose.Location = new System.Drawing.Point(393, 344);
+            this.ButtonClose.Location = new System.Drawing.Point(393, 370);
             this.ButtonClose.Name = "ButtonClose";
             this.ButtonClose.Size = new System.Drawing.Size(97, 32);
-            this.ButtonClose.TabIndex = 48;
+            this.ButtonClose.TabIndex = 60;
             this.ButtonClose.Text = "CLEAR";
             this.ButtonClose.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonClose.UseVisualStyleBackColor = false;
             this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
-            // FormManagerStocks
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.simpleInventoryManagementDataSet;
+            // 
+            // simpleInventoryManagementDataSet
+            // 
+            this.simpleInventoryManagementDataSet.DataSetName = "SimpleInventoryManagementDataSet";
+            this.simpleInventoryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // documentTypesBindingSource
+            // 
+            this.documentTypesBindingSource.DataMember = "DocumentTypes";
+            this.documentTypesBindingSource.DataSource = this.simpleInventoryManagementDataSet;
+            // 
+            // documentTypesTableAdapter
+            // 
+            this.documentTypesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CategoriesTableAdapter = null;
+            this.tableAdapterManager.DocumentItemsTableAdapter = null;
+            this.tableAdapterManager.DocumentsTableAdapter = null;
+            this.tableAdapterManager.DocumentTypesTableAdapter = this.documentTypesTableAdapter;
+            this.tableAdapterManager.PriceHistoryTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.PurchaseOrdersTableAdapter = null;
+            this.tableAdapterManager.RolesTableAdapter = null;
+            this.tableAdapterManager.StatusesOrdersTableAdapter = null;
+            this.tableAdapterManager.StockTableAdapter = null;
+            this.tableAdapterManager.SuppliersTableAdapter = null;
+            this.tableAdapterManager.UnitsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
+            this.tableAdapterManager.WarehousesTableAdapter = null;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "IsActive";
+            this.dataGridViewTextBoxColumn6.HeaderText = "IsActive";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Prefix";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Prefix";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "OperationType";
+            this.dataGridViewTextBoxColumn4.HeaderText = "OperationType";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "DocTypeName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "DocTypeName";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DocTypeCode";
+            this.dataGridViewTextBoxColumn2.HeaderText = "DocTypeCode";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "DocTypeId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "DocTypeId";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // documentTypesDataGridView
+            // 
+            this.documentTypesDataGridView.AutoGenerateColumns = false;
+            this.documentTypesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
+            this.documentTypesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.documentTypesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.documentTypesDataGridView.DataSource = this.documentTypesBindingSource;
+            this.documentTypesDataGridView.Location = new System.Drawing.Point(-2, -1);
+            this.documentTypesDataGridView.Name = "documentTypesDataGridView";
+            this.documentTypesDataGridView.Size = new System.Drawing.Size(617, 330);
+            this.documentTypesDataGridView.TabIndex = 70;
+            // 
+            // FormAdminDocType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.ClientSize = new System.Drawing.Size(611, 386);
+            this.ClientSize = new System.Drawing.Size(613, 422);
+            this.Controls.Add(this.documentTypesDataGridView);
             this.Controls.Add(this.rjButtonSave);
             this.Controls.Add(this.rjButton2);
-            this.Controls.Add(this.rjButtonREP);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.ButtonFIllter);
             this.Controls.Add(this.ButtonFind);
@@ -351,33 +331,23 @@
             this.Controls.Add(this.labelFiltering);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.ButtonClose);
-            this.Controls.Add(this.productsViewDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormManagerStocks";
-            this.Text = "FormManagerStocks";
-            this.Load += new System.EventHandler(this.FormManagerStocks_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).EndInit();
+            this.Name = "FormAdminDocType";
+            this.Text = "FormAdminDocType";
+            this.Load += new System.EventHandler(this.FormAdminDocType_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentTypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentTypesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView productsViewDataGridView;
-        private SimpleInventoryManagementDataSet simpleInventoryManagementDataSet;
-        private System.Windows.Forms.BindingSource stockBindingSource;
-        private SimpleInventoryManagementDataSetTableAdapters.StockTableAdapter stockTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn warehouseIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reservedQuantityDataGridViewTextBoxColumn;
+
         private RJButton rjButtonSave;
         private RJButton rjButton2;
-        private RJButton rjButtonREP;
         private System.Windows.Forms.ComboBox comboBox;
         private RJButton ButtonFIllter;
         private RJButton ButtonFind;
@@ -386,5 +356,18 @@
         private System.Windows.Forms.Label labelFiltering;
         private System.Windows.Forms.Label labelSearch;
         private RJButton ButtonClose;
+        private SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private SimpleInventoryManagementDataSet simpleInventoryManagementDataSet;
+        private System.Windows.Forms.BindingSource documentTypesBindingSource;
+        private SimpleInventoryManagementDataSetTableAdapters.DocumentTypesTableAdapter documentTypesTableAdapter;
+        private SimpleInventoryManagementDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView documentTypesDataGridView;
     }
 }

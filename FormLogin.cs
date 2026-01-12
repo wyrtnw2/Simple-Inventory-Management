@@ -73,7 +73,7 @@ namespace Simple_Inventory_Management
                     }
                     else if (role == 3)
                     {
-                        MessageBox.Show("You have successfully logged in as a storekeeper!", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You have successfully logged in as a accountant!", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FormAccountant accountant = new FormAccountant();
                         accountant.Show();
                         this.Hide();

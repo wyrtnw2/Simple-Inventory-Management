@@ -1,6 +1,6 @@
 ﻿namespace Simple_Inventory_Management
 {
-    partial class FormManagerCatigories
+    partial class FormAdminUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.productsViewDataGridView = new System.Windows.Forms.DataGridView();
-            this.categoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parentCategoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriesTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.CategoriesTableAdapter();
-            this.rjButtonREP = new Simple_Inventory_Management.RJButton();
+            this.usersIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
+            this.usersTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter();
+            this.rjButtonSave = new Simple_Inventory_Management.RJButton();
+            this.rjButton2 = new Simple_Inventory_Management.RJButton();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.ButtonFIllter = new Simple_Inventory_Management.RJButton();
             this.ButtonFind = new Simple_Inventory_Management.RJButton();
@@ -47,18 +50,10 @@
             this.labelFiltering = new System.Windows.Forms.Label();
             this.labelSearch = new System.Windows.Forms.Label();
             this.ButtonClose = new Simple_Inventory_Management.RJButton();
-            this.rjButtonSave = new Simple_Inventory_Management.RJButton();
-            this.rjButton2 = new Simple_Inventory_Management.RJButton();
-            this.categoriesTableAdapter1 = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.CategoriesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // simpleInventoryManagementDataSet
-            // 
-            this.simpleInventoryManagementDataSet.DataSetName = "SimpleInventoryManagementDataSet";
-            this.simpleInventoryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // productsViewDataGridView
             // 
@@ -73,81 +68,119 @@
             this.productsViewDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.productsViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productsViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categoryIdDataGridViewTextBoxColumn,
-            this.categoryNameDataGridViewTextBoxColumn,
-            this.parentCategoryIdDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn});
-            this.productsViewDataGridView.DataSource = this.categoriesBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Orbitron Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.productsViewDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            this.usersIDDataGridViewTextBoxColumn,
+            this.roleDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.fullNameDataGridViewTextBoxColumn});
+            this.productsViewDataGridView.DataSource = this.usersBindingSource;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Orbitron Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.productsViewDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.productsViewDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.productsViewDataGridView.EnableHeadersVisualStyles = false;
             this.productsViewDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
             this.productsViewDataGridView.Location = new System.Drawing.Point(0, 0);
             this.productsViewDataGridView.Name = "productsViewDataGridView";
             this.productsViewDataGridView.Size = new System.Drawing.Size(611, 305);
-            this.productsViewDataGridView.TabIndex = 3;
+            this.productsViewDataGridView.TabIndex = 4;
             // 
-            // categoryIdDataGridViewTextBoxColumn
+            // usersIDDataGridViewTextBoxColumn
             // 
-            this.categoryIdDataGridViewTextBoxColumn.DataPropertyName = "CategoryId";
-            this.categoryIdDataGridViewTextBoxColumn.HeaderText = "CategoryId";
-            this.categoryIdDataGridViewTextBoxColumn.Name = "categoryIdDataGridViewTextBoxColumn";
-            this.categoryIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usersIDDataGridViewTextBoxColumn.DataPropertyName = "UsersID";
+            this.usersIDDataGridViewTextBoxColumn.HeaderText = "UsersID";
+            this.usersIDDataGridViewTextBoxColumn.Name = "usersIDDataGridViewTextBoxColumn";
+            this.usersIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // categoryNameDataGridViewTextBoxColumn
+            // roleDataGridViewTextBoxColumn
             // 
-            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
-            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
-            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "role";
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
             // 
-            // parentCategoryIdDataGridViewTextBoxColumn
+            // statusDataGridViewTextBoxColumn
             // 
-            this.parentCategoryIdDataGridViewTextBoxColumn.DataPropertyName = "ParentCategoryId";
-            this.parentCategoryIdDataGridViewTextBoxColumn.HeaderText = "ParentCategoryId";
-            this.parentCategoryIdDataGridViewTextBoxColumn.Name = "parentCategoryIdDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
-            // descriptionDataGridViewTextBoxColumn
+            // usernameDataGridViewTextBoxColumn
             // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
             // 
-            // categoriesBindingSource
+            // passwordDataGridViewTextBoxColumn
             // 
-            this.categoriesBindingSource.DataMember = "Categories";
-            this.categoriesBindingSource.DataSource = this.simpleInventoryManagementDataSet;
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             // 
-            // categoriesTableAdapter
+            // fullNameDataGridViewTextBoxColumn
             // 
-            this.categoriesTableAdapter.ClearBeforeFill = true;
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
             // 
-            // rjButtonREP
+            // usersBindingSource
             // 
-            this.rjButtonREP.BackColor = System.Drawing.Color.Transparent;
-            this.rjButtonREP.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButtonREP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonREP.BorderRadius = 6;
-            this.rjButtonREP.BorderSize = 2;
-            this.rjButtonREP.FlatAppearance.BorderSize = 0;
-            this.rjButtonREP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.rjButtonREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButtonREP.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButtonREP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonREP.Location = new System.Drawing.Point(397, 311);
-            this.rjButtonREP.Name = "rjButtonREP";
-            this.rjButtonREP.Size = new System.Drawing.Size(97, 32);
-            this.rjButtonREP.TabIndex = 45;
-            this.rjButtonREP.Text = "REPORT";
-            this.rjButtonREP.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonREP.UseVisualStyleBackColor = false;
-            this.rjButtonREP.Click += new System.EventHandler(this.rjButtonREP_Click);
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.simpleInventoryManagementDataSet;
+            // 
+            // simpleInventoryManagementDataSet
+            // 
+            this.simpleInventoryManagementDataSet.DataSetName = "SimpleInventoryManagementDataSet";
+            this.simpleInventoryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // rjButtonSave
+            // 
+            this.rjButtonSave.BackColor = System.Drawing.Color.Transparent;
+            this.rjButtonSave.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjButtonSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButtonSave.BorderRadius = 6;
+            this.rjButtonSave.BorderSize = 2;
+            this.rjButtonSave.FlatAppearance.BorderSize = 0;
+            this.rjButtonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
+            this.rjButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButtonSave.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButtonSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButtonSave.Location = new System.Drawing.Point(496, 325);
+            this.rjButtonSave.Name = "rjButtonSave";
+            this.rjButtonSave.Size = new System.Drawing.Size(97, 32);
+            this.rjButtonSave.TabIndex = 58;
+            this.rjButtonSave.Text = "SAVE";
+            this.rjButtonSave.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButtonSave.UseVisualStyleBackColor = false;
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.Transparent;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButton2.BorderRadius = 6;
+            this.rjButton2.BorderSize = 2;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButton2.Location = new System.Drawing.Point(393, 325);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(97, 32);
+            this.rjButton2.TabIndex = 57;
+            this.rjButton2.Text = "ADD";
+            this.rjButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
+            this.rjButton2.UseVisualStyleBackColor = false;
             // 
             // comboBox
             // 
@@ -170,10 +203,10 @@
             "Мебель",
             "Продукты питания",
             "Напитки"});
-            this.comboBox.Location = new System.Drawing.Point(115, 353);
+            this.comboBox.Location = new System.Drawing.Point(111, 367);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(173, 24);
-            this.comboBox.TabIndex = 44;
+            this.comboBox.TabIndex = 55;
             // 
             // ButtonFIllter
             // 
@@ -186,14 +219,13 @@
             this.ButtonFIllter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFIllter.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFIllter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.Location = new System.Drawing.Point(294, 346);
+            this.ButtonFIllter.Location = new System.Drawing.Point(290, 360);
             this.ButtonFIllter.Name = "ButtonFIllter";
             this.ButtonFIllter.Size = new System.Drawing.Size(97, 32);
-            this.ButtonFIllter.TabIndex = 43;
+            this.ButtonFIllter.TabIndex = 54;
             this.ButtonFIllter.Text = "FILLTER";
             this.ButtonFIllter.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonFIllter.UseVisualStyleBackColor = false;
-            this.ButtonFIllter.Click += new System.EventHandler(this.ButtonFIllter_Click);
             // 
             // ButtonFind
             // 
@@ -206,22 +238,21 @@
             this.ButtonFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFind.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFind.Location = new System.Drawing.Point(294, 311);
+            this.ButtonFind.Location = new System.Drawing.Point(290, 325);
             this.ButtonFind.Name = "ButtonFind";
             this.ButtonFind.Size = new System.Drawing.Size(97, 32);
-            this.ButtonFind.TabIndex = 42;
+            this.ButtonFind.TabIndex = 53;
             this.ButtonFind.Text = "FIND";
             this.ButtonFind.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonFind.UseVisualStyleBackColor = false;
-            this.ButtonFind.Click += new System.EventHandler(this.ButtonFind_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.panel2.Location = new System.Drawing.Point(114, 337);
+            this.panel2.Location = new System.Drawing.Point(110, 351);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(174, 1);
-            this.panel2.TabIndex = 40;
+            this.panel2.TabIndex = 51;
             // 
             // textBoxSearch
             // 
@@ -229,20 +260,20 @@
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.textBoxSearch.Location = new System.Drawing.Point(114, 318);
+            this.textBoxSearch.Location = new System.Drawing.Point(110, 332);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(174, 17);
-            this.textBoxSearch.TabIndex = 41;
+            this.textBoxSearch.TabIndex = 52;
             // 
             // labelFiltering
             // 
             this.labelFiltering.AutoSize = true;
             this.labelFiltering.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFiltering.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.labelFiltering.Location = new System.Drawing.Point(12, 353);
+            this.labelFiltering.Location = new System.Drawing.Point(8, 367);
             this.labelFiltering.Name = "labelFiltering";
             this.labelFiltering.Size = new System.Drawing.Size(96, 17);
-            this.labelFiltering.TabIndex = 39;
+            this.labelFiltering.TabIndex = 50;
             this.labelFiltering.Text = "FILTERING:";
             // 
             // labelSearch
@@ -250,10 +281,10 @@
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.labelSearch.Location = new System.Drawing.Point(16, 321);
+            this.labelSearch.Location = new System.Drawing.Point(12, 335);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(82, 17);
-            this.labelSearch.TabIndex = 38;
+            this.labelSearch.TabIndex = 49;
             this.labelSearch.Text = "SEARCH:";
             // 
             // ButtonClose
@@ -268,70 +299,22 @@
             this.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonClose.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonClose.Location = new System.Drawing.Point(397, 346);
+            this.ButtonClose.Location = new System.Drawing.Point(393, 360);
             this.ButtonClose.Name = "ButtonClose";
             this.ButtonClose.Size = new System.Drawing.Size(97, 32);
-            this.ButtonClose.TabIndex = 37;
+            this.ButtonClose.TabIndex = 48;
             this.ButtonClose.Text = "CLEAR";
             this.ButtonClose.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonClose.UseVisualStyleBackColor = false;
-            this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
-            // rjButtonSave
-            // 
-            this.rjButtonSave.BackColor = System.Drawing.Color.Transparent;
-            this.rjButtonSave.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButtonSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonSave.BorderRadius = 6;
-            this.rjButtonSave.BorderSize = 2;
-            this.rjButtonSave.FlatAppearance.BorderSize = 0;
-            this.rjButtonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.rjButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButtonSave.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButtonSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonSave.Location = new System.Drawing.Point(500, 310);
-            this.rjButtonSave.Name = "rjButtonSave";
-            this.rjButtonSave.Size = new System.Drawing.Size(97, 32);
-            this.rjButtonSave.TabIndex = 47;
-            this.rjButtonSave.Text = "SAVE";
-            this.rjButtonSave.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonSave.UseVisualStyleBackColor = false;
-            this.rjButtonSave.Click += new System.EventHandler(this.rjButtonSave_Click);
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.Transparent;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButton2.BorderRadius = 6;
-            this.rjButton2.BorderSize = 2;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButton2.Location = new System.Drawing.Point(500, 345);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(97, 32);
-            this.rjButton2.TabIndex = 46;
-            this.rjButton2.Text = "ADD";
-            this.rjButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
-            // 
-            // categoriesTableAdapter1
-            // 
-            this.categoriesTableAdapter1.ClearBeforeFill = true;
-            // 
-            // FormManagerCatigories
+            // FormAdminUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.ClientSize = new System.Drawing.Size(611, 386);
+            this.ClientSize = new System.Drawing.Size(611, 413);
             this.Controls.Add(this.rjButtonSave);
             this.Controls.Add(this.rjButton2);
-            this.Controls.Add(this.rjButtonREP);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.ButtonFIllter);
             this.Controls.Add(this.ButtonFind);
@@ -342,27 +325,31 @@
             this.Controls.Add(this.ButtonClose);
             this.Controls.Add(this.productsViewDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormManagerCatigories";
-            this.Text = "FormManagerCatigories";
-            this.Load += new System.EventHandler(this.FormManagerCatigories_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).EndInit();
+            this.Name = "FormAdminUsers";
+            this.Text = "FormAdminUsers";
+            this.Load += new System.EventHandler(this.FormAdminUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private SimpleInventoryManagementDataSet simpleInventoryManagementDataSet;
+
         private System.Windows.Forms.DataGridView productsViewDataGridView;
-        private System.Windows.Forms.BindingSource categoriesBindingSource;
-        private SimpleInventoryManagementDataSetTableAdapters.CategoriesTableAdapter categoriesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn parentCategoryIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private RJButton rjButtonREP;
+        private SimpleInventoryManagementDataSet simpleInventoryManagementDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usersIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
+        private RJButton rjButtonSave;
+        private RJButton rjButton2;
         private System.Windows.Forms.ComboBox comboBox;
         private RJButton ButtonFIllter;
         private RJButton ButtonFind;
@@ -371,8 +358,5 @@
         private System.Windows.Forms.Label labelFiltering;
         private System.Windows.Forms.Label labelSearch;
         private RJButton ButtonClose;
-        private RJButton rjButtonSave;
-        private RJButton rjButton2;
-        private SimpleInventoryManagementDataSetTableAdapters.CategoriesTableAdapter categoriesTableAdapter1;
     }
 }
