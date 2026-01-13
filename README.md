@@ -19,7 +19,7 @@
 > --------------------------------------------------------------------------------------------------------------------------------
 > # **For the program to work, you must:**
 >> 1. Visual Studio 2022 (Community, Professional or Enterprise). **Can be downloaded here: https://visualstudio.microsoft.com/ru/downloads/**.
->> 2. .NET Desktop Application Development (Includes WinForms). **Installed when loading MS Visual Studio.**
+>> 2. .NET Desktop Application Development (Includes WinForms). **Installed when loading MS Visual Studio.** 
 >> 3. SQL Server Management Studio (SSMS) 19+. **For database administration, script execution, debugging. Can be downloaded here: https://learn.microsoft.com/ru-ru/ssms/install/install**.
 >> 4. MS SQL Server. **Can be downloaded here: https://www.microsoft.com/ru-ru/sql-server/sql-server-downloads**.
 
