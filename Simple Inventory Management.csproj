@@ -122,11 +122,29 @@
     <Compile Include="FormSalesman.Designer.cs">
       <DependentUpon>FormSalesman.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStorekeeper.cs">
+    <Compile Include="FormSalesmanOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormStorekeeper.Designer.cs">
-      <DependentUpon>FormStorekeeper.cs</DependentUpon>
+    <Compile Include="FormSalesmanOrders.Designer.cs">
+      <DependentUpon>FormSalesmanOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSalesmanPriceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalesmanPriceHistory.Designer.cs">
+      <DependentUpon>FormSalesmanPriceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSalesmanSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalesmanSuppliers.Designer.cs">
+      <DependentUpon>FormSalesmanSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSalesmanStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalesmanStocks.Designer.cs">
+      <DependentUpon>FormSalesmanStocks.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Program.cs" />
@@ -171,6 +189,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMnagerProducts.resx">
       <DependentUpon>FormMnagerProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalesman.resx">
+      <DependentUpon>FormSalesman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalesmanOrders.resx">
+      <DependentUpon>FormSalesmanOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalesmanPriceHistory.resx">
+      <DependentUpon>FormSalesmanPriceHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalesmanStocks.resx">
+      <DependentUpon>FormSalesmanStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalesmanSuppliers.resx">
+      <DependentUpon>FormSalesmanSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

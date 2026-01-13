@@ -66,10 +66,10 @@ namespace Simple_Inventory_Management
                     }
                     else if (role == 2)
                     {
-                        MessageBox.Show("You have successfully logged in as a storekeeper!", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FormStorekeeper storekeeper = new FormStorekeeper();
-                        storekeeper.Show();
-                        this.Hide();
+                        //MessageBox.Show("You have successfully logged in as a storekeeper!", "Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //FormStorekeeper storekeeper = new FormStorekeeper();
+                        //storekeeper.Show();
+                        //this.Hide();
                     }
                     else if (role == 3)
                     {

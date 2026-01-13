@@ -11,20 +11,24 @@ using System.Windows.Forms;
 
 namespace Simple_Inventory_Management
 {
-    public partial class FormManagerStocks : Form
+    public partial class FormSalesmanStocks : Form
     {
-        public FormManagerStocks()
+        public FormSalesmanStocks()
         {
             InitializeComponent();
         }
 
-        private void FormManagerStocks_Load(object sender, EventArgs e)
+        private void FormSalesmanStocks_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "simpleInventoryManagementDataSet.vw_CurrentStock". При необходимости она может быть перемещена или удалена.
-            this.vw_CurrentStockTableAdapter.Fill(this.simpleInventoryManagementDataSet.vw_CurrentStock);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "simpleInventoryManagementDataSet.Stock". При необходимости она может быть перемещена или удалена.
             this.stockTableAdapter.Fill(this.simpleInventoryManagementDataSet.Stock);
 
+        }
+
+        private void rjButtonREP_Click(object sender, EventArgs e)
+        {
+            DGVPrinter dgvPrinter = new DGVPrinter();
+            dgvPrinter.CreateReport("Отчет по остаткам", dataGridView1);
         }
 
         private void ButtonFind_Click(object sender, EventArgs e)
@@ -42,31 +46,16 @@ namespace Simple_Inventory_Management
             }
         }
 
-        private void ButtonFIllter_Click(object sender, EventArgs e)
+        private void rjButton2_Click(object sender, EventArgs e)
         {
-            stockBindingSource.Filter = "ProductName = '" + comboBox.Text + "'";
-        }
-
-        private void rjButtonREP_Click(object sender, EventArgs e)
-        {
-            DGVPrinter dgvPrinter = new DGVPrinter();
-            dgvPrinter.CreateReport("Отчет по поставкам", dataGridView1);
-        }
-
-        private void ButtonClose_Click(object sender, EventArgs e)
-        {
-            stockBindingSource.Filter = "";
+            stockBindingSource.AddNew();
         }
 
         private void rjButtonSave_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.stockBindingSource.EndEdit();
-        }
-
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            stockBindingSource.AddNew();
+            this.stockTableAdapter.Update(this.simpleInventoryManagementDataSet.Stock);
         }
     }
 }

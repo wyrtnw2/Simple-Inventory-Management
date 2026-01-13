@@ -48,7 +48,7 @@ namespace Simple_Inventory_Management
 
         private void ButtonFIllter_Click(object sender, EventArgs e)
         {
-            documentTypesBindingSource.Filter = "Prefix = '" + comboBox.Text + "'";
+            //documentTypesBindingSource.Filter = " = '" + comboBox.Text + "'";
         }
 
         private void rjButton2_Click(object sender, EventArgs e)

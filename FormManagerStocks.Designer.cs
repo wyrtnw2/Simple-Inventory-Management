@@ -29,19 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.productsViewDataGridView = new System.Windows.Forms.DataGridView();
-            this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
             this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
             this.stockTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.StockTableAdapter();
-            this.stockIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.warehouseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservedQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rjButtonSave = new Simple_Inventory_Management.RJButton();
-            this.rjButton2 = new Simple_Inventory_Management.RJButton();
             this.rjButtonREP = new Simple_Inventory_Management.RJButton();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.ButtonFIllter = new Simple_Inventory_Management.RJButton();
@@ -51,139 +41,38 @@
             this.labelFiltering = new System.Windows.Forms.Label();
             this.labelSearch = new System.Windows.Forms.Label();
             this.ButtonClose = new Simple_Inventory_Management.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.vwCurrentStockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vw_CurrentStockTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.vw_CurrentStockTableAdapter();
+            this.warehouseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.articleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservedQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availableQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minStockLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwCurrentStockBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productsViewDataGridView
-            // 
-            this.productsViewDataGridView.AllowUserToAddRows = false;
-            this.productsViewDataGridView.AllowUserToDeleteRows = false;
-            this.productsViewDataGridView.AllowUserToOrderColumns = true;
-            this.productsViewDataGridView.AllowUserToResizeColumns = false;
-            this.productsViewDataGridView.AllowUserToResizeRows = false;
-            this.productsViewDataGridView.AutoGenerateColumns = false;
-            this.productsViewDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.productsViewDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productsViewDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.productsViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stockIdDataGridViewTextBoxColumn,
-            this.warehouseIdDataGridViewTextBoxColumn,
-            this.productIdDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.lastUpdatedDataGridViewTextBoxColumn,
-            this.reservedQuantityDataGridViewTextBoxColumn});
-            this.productsViewDataGridView.DataSource = this.stockBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Orbitron Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.productsViewDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
-            this.productsViewDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productsViewDataGridView.EnableHeadersVisualStyles = false;
-            this.productsViewDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.productsViewDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.productsViewDataGridView.Name = "productsViewDataGridView";
-            this.productsViewDataGridView.Size = new System.Drawing.Size(611, 305);
-            this.productsViewDataGridView.TabIndex = 4;
-            // 
-            // simpleInventoryManagementDataSet
-            // 
-            this.simpleInventoryManagementDataSet.DataSetName = "SimpleInventoryManagementDataSet";
-            this.simpleInventoryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stockBindingSource
             // 
             this.stockBindingSource.DataMember = "Stock";
             this.stockBindingSource.DataSource = this.simpleInventoryManagementDataSet;
             // 
+            // simpleInventoryManagementDataSet
+            // 
+            this.simpleInventoryManagementDataSet.DataSetName = "SimpleInventoryManagementDataSet";
+            this.simpleInventoryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // stockTableAdapter
             // 
             this.stockTableAdapter.ClearBeforeFill = true;
-            // 
-            // stockIdDataGridViewTextBoxColumn
-            // 
-            this.stockIdDataGridViewTextBoxColumn.DataPropertyName = "StockId";
-            this.stockIdDataGridViewTextBoxColumn.HeaderText = "StockId";
-            this.stockIdDataGridViewTextBoxColumn.Name = "stockIdDataGridViewTextBoxColumn";
-            this.stockIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // warehouseIdDataGridViewTextBoxColumn
-            // 
-            this.warehouseIdDataGridViewTextBoxColumn.DataPropertyName = "WarehouseId";
-            this.warehouseIdDataGridViewTextBoxColumn.HeaderText = "WarehouseId";
-            this.warehouseIdDataGridViewTextBoxColumn.Name = "warehouseIdDataGridViewTextBoxColumn";
-            // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // lastUpdatedDataGridViewTextBoxColumn
-            // 
-            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "LastUpdated";
-            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "LastUpdated";
-            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
-            // 
-            // reservedQuantityDataGridViewTextBoxColumn
-            // 
-            this.reservedQuantityDataGridViewTextBoxColumn.DataPropertyName = "ReservedQuantity";
-            this.reservedQuantityDataGridViewTextBoxColumn.HeaderText = "ReservedQuantity";
-            this.reservedQuantityDataGridViewTextBoxColumn.Name = "reservedQuantityDataGridViewTextBoxColumn";
-            // 
-            // rjButtonSave
-            // 
-            this.rjButtonSave.BackColor = System.Drawing.Color.Transparent;
-            this.rjButtonSave.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButtonSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonSave.BorderRadius = 6;
-            this.rjButtonSave.BorderSize = 2;
-            this.rjButtonSave.FlatAppearance.BorderSize = 0;
-            this.rjButtonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.rjButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButtonSave.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButtonSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonSave.Location = new System.Drawing.Point(496, 308);
-            this.rjButtonSave.Name = "rjButtonSave";
-            this.rjButtonSave.Size = new System.Drawing.Size(97, 32);
-            this.rjButtonSave.TabIndex = 58;
-            this.rjButtonSave.Text = "SAVE";
-            this.rjButtonSave.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButtonSave.UseVisualStyleBackColor = false;
-            this.rjButtonSave.Click += new System.EventHandler(this.rjButtonSave_Click);
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.Transparent;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButton2.BorderRadius = 6;
-            this.rjButton2.BorderSize = 2;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButton2.Location = new System.Drawing.Point(496, 343);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(97, 32);
-            this.rjButton2.TabIndex = 57;
-            this.rjButton2.Text = "ADD";
-            this.rjButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButtonREP
             // 
@@ -213,20 +102,8 @@
             this.comboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
-            "Электроника",
-            "Компьютеры и ноутбуки",
             "Комплектующие для ПК",
-            "Периферия",
-            "Офисная техника",
-            "Принтеры и МФУ",
-            "Канцелярия",
-            "Бумажная продукция",
-            "Письменные принадлежности",
-            "Хозяйственные товары",
-            "Бытовая химия",
-            "Мебель",
-            "Продукты питания",
-            "Напитки"});
+            "Письменные принадлежности"});
             this.comboBox.Location = new System.Drawing.Point(111, 351);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(173, 24);
@@ -334,14 +211,105 @@
             this.ButtonClose.UseVisualStyleBackColor = false;
             this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.warehouseNameDataGridViewTextBoxColumn,
+            this.articleDataGridViewTextBoxColumn,
+            this.productNameDataGridViewTextBoxColumn,
+            this.categoryNameDataGridViewTextBoxColumn,
+            this.unitNameDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.reservedQuantityDataGridViewTextBoxColumn,
+            this.availableQuantityDataGridViewTextBoxColumn,
+            this.minStockLevelDataGridViewTextBoxColumn,
+            this.stockStatusDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.vwCurrentStockBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(614, 303);
+            this.dataGridView1.TabIndex = 59;
+            // 
+            // vwCurrentStockBindingSource
+            // 
+            this.vwCurrentStockBindingSource.DataMember = "vw_CurrentStock";
+            this.vwCurrentStockBindingSource.DataSource = this.simpleInventoryManagementDataSet;
+            // 
+            // vw_CurrentStockTableAdapter
+            // 
+            this.vw_CurrentStockTableAdapter.ClearBeforeFill = true;
+            // 
+            // warehouseNameDataGridViewTextBoxColumn
+            // 
+            this.warehouseNameDataGridViewTextBoxColumn.DataPropertyName = "WarehouseName";
+            this.warehouseNameDataGridViewTextBoxColumn.HeaderText = "WarehouseName";
+            this.warehouseNameDataGridViewTextBoxColumn.Name = "warehouseNameDataGridViewTextBoxColumn";
+            // 
+            // articleDataGridViewTextBoxColumn
+            // 
+            this.articleDataGridViewTextBoxColumn.DataPropertyName = "Article";
+            this.articleDataGridViewTextBoxColumn.HeaderText = "Article";
+            this.articleDataGridViewTextBoxColumn.Name = "articleDataGridViewTextBoxColumn";
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            // 
+            // categoryNameDataGridViewTextBoxColumn
+            // 
+            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
+            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
+            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
+            // 
+            // unitNameDataGridViewTextBoxColumn
+            // 
+            this.unitNameDataGridViewTextBoxColumn.DataPropertyName = "UnitName";
+            this.unitNameDataGridViewTextBoxColumn.HeaderText = "UnitName";
+            this.unitNameDataGridViewTextBoxColumn.Name = "unitNameDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // reservedQuantityDataGridViewTextBoxColumn
+            // 
+            this.reservedQuantityDataGridViewTextBoxColumn.DataPropertyName = "ReservedQuantity";
+            this.reservedQuantityDataGridViewTextBoxColumn.HeaderText = "ReservedQuantity";
+            this.reservedQuantityDataGridViewTextBoxColumn.Name = "reservedQuantityDataGridViewTextBoxColumn";
+            // 
+            // availableQuantityDataGridViewTextBoxColumn
+            // 
+            this.availableQuantityDataGridViewTextBoxColumn.DataPropertyName = "AvailableQuantity";
+            this.availableQuantityDataGridViewTextBoxColumn.HeaderText = "AvailableQuantity";
+            this.availableQuantityDataGridViewTextBoxColumn.Name = "availableQuantityDataGridViewTextBoxColumn";
+            this.availableQuantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // minStockLevelDataGridViewTextBoxColumn
+            // 
+            this.minStockLevelDataGridViewTextBoxColumn.DataPropertyName = "MinStockLevel";
+            this.minStockLevelDataGridViewTextBoxColumn.HeaderText = "MinStockLevel";
+            this.minStockLevelDataGridViewTextBoxColumn.Name = "minStockLevelDataGridViewTextBoxColumn";
+            // 
+            // stockStatusDataGridViewTextBoxColumn
+            // 
+            this.stockStatusDataGridViewTextBoxColumn.DataPropertyName = "StockStatus";
+            this.stockStatusDataGridViewTextBoxColumn.HeaderText = "StockStatus";
+            this.stockStatusDataGridViewTextBoxColumn.Name = "stockStatusDataGridViewTextBoxColumn";
+            this.stockStatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // FormManagerStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(611, 386);
-            this.Controls.Add(this.rjButtonSave);
-            this.Controls.Add(this.rjButton2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rjButtonREP);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.ButtonFIllter);
@@ -351,32 +319,23 @@
             this.Controls.Add(this.labelFiltering);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.ButtonClose);
-            this.Controls.Add(this.productsViewDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormManagerStocks";
             this.Text = "FormManagerStocks";
             this.Load += new System.EventHandler(this.FormManagerStocks_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwCurrentStockBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView productsViewDataGridView;
         private SimpleInventoryManagementDataSet simpleInventoryManagementDataSet;
         private System.Windows.Forms.BindingSource stockBindingSource;
         private SimpleInventoryManagementDataSetTableAdapters.StockTableAdapter stockTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn warehouseIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reservedQuantityDataGridViewTextBoxColumn;
-        private RJButton rjButtonSave;
-        private RJButton rjButton2;
         private RJButton rjButtonREP;
         private System.Windows.Forms.ComboBox comboBox;
         private RJButton ButtonFIllter;
@@ -386,5 +345,18 @@
         private System.Windows.Forms.Label labelFiltering;
         private System.Windows.Forms.Label labelSearch;
         private RJButton ButtonClose;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource vwCurrentStockBindingSource;
+        private SimpleInventoryManagementDataSetTableAdapters.vw_CurrentStockTableAdapter vw_CurrentStockTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn warehouseNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn articleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unitNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reservedQuantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn availableQuantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn minStockLevelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockStatusDataGridViewTextBoxColumn;
     }
 }

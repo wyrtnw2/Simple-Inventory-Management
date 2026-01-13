@@ -29,13 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
-            this.productsViewDataGridView = new System.Windows.Forms.DataGridView();
-            this.categoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parentCategoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.CategoriesTableAdapter();
             this.rjButtonREP = new Simple_Inventory_Management.RJButton();
@@ -50,74 +44,20 @@
             this.rjButtonSave = new Simple_Inventory_Management.RJButton();
             this.rjButton2 = new Simple_Inventory_Management.RJButton();
             this.categoriesTableAdapter1 = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.CategoriesTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.categoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parentCategoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleInventoryManagementDataSet
             // 
             this.simpleInventoryManagementDataSet.DataSetName = "SimpleInventoryManagementDataSet";
             this.simpleInventoryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsViewDataGridView
-            // 
-            this.productsViewDataGridView.AllowUserToAddRows = false;
-            this.productsViewDataGridView.AllowUserToDeleteRows = false;
-            this.productsViewDataGridView.AllowUserToOrderColumns = true;
-            this.productsViewDataGridView.AllowUserToResizeColumns = false;
-            this.productsViewDataGridView.AllowUserToResizeRows = false;
-            this.productsViewDataGridView.AutoGenerateColumns = false;
-            this.productsViewDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.productsViewDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productsViewDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.productsViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categoryIdDataGridViewTextBoxColumn,
-            this.categoryNameDataGridViewTextBoxColumn,
-            this.parentCategoryIdDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn});
-            this.productsViewDataGridView.DataSource = this.categoriesBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Orbitron Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.productsViewDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
-            this.productsViewDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productsViewDataGridView.EnableHeadersVisualStyles = false;
-            this.productsViewDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.productsViewDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.productsViewDataGridView.Name = "productsViewDataGridView";
-            this.productsViewDataGridView.Size = new System.Drawing.Size(611, 305);
-            this.productsViewDataGridView.TabIndex = 3;
-            // 
-            // categoryIdDataGridViewTextBoxColumn
-            // 
-            this.categoryIdDataGridViewTextBoxColumn.DataPropertyName = "CategoryId";
-            this.categoryIdDataGridViewTextBoxColumn.HeaderText = "CategoryId";
-            this.categoryIdDataGridViewTextBoxColumn.Name = "categoryIdDataGridViewTextBoxColumn";
-            this.categoryIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // categoryNameDataGridViewTextBoxColumn
-            // 
-            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
-            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
-            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
-            // 
-            // parentCategoryIdDataGridViewTextBoxColumn
-            // 
-            this.parentCategoryIdDataGridViewTextBoxColumn.DataPropertyName = "ParentCategoryId";
-            this.parentCategoryIdDataGridViewTextBoxColumn.HeaderText = "ParentCategoryId";
-            this.parentCategoryIdDataGridViewTextBoxColumn.Name = "parentCategoryIdDataGridViewTextBoxColumn";
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             // 
             // categoriesBindingSource
             // 
@@ -323,12 +263,53 @@
             // 
             this.categoriesTableAdapter1.ClearBeforeFill = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.categoryIdDataGridViewTextBoxColumn,
+            this.categoryNameDataGridViewTextBoxColumn,
+            this.parentCategoryIdDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.categoriesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(-3, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(617, 304);
+            this.dataGridView1.TabIndex = 48;
+            // 
+            // categoryIdDataGridViewTextBoxColumn
+            // 
+            this.categoryIdDataGridViewTextBoxColumn.DataPropertyName = "CategoryId";
+            this.categoryIdDataGridViewTextBoxColumn.HeaderText = "CategoryId";
+            this.categoryIdDataGridViewTextBoxColumn.Name = "categoryIdDataGridViewTextBoxColumn";
+            this.categoryIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoryNameDataGridViewTextBoxColumn
+            // 
+            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
+            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
+            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
+            // 
+            // parentCategoryIdDataGridViewTextBoxColumn
+            // 
+            this.parentCategoryIdDataGridViewTextBoxColumn.DataPropertyName = "ParentCategoryId";
+            this.parentCategoryIdDataGridViewTextBoxColumn.HeaderText = "ParentCategoryId";
+            this.parentCategoryIdDataGridViewTextBoxColumn.Name = "parentCategoryIdDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
             // FormManagerCatigories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(611, 386);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rjButtonSave);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.rjButtonREP);
@@ -340,14 +321,13 @@
             this.Controls.Add(this.labelFiltering);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.ButtonClose);
-            this.Controls.Add(this.productsViewDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormManagerCatigories";
             this.Text = "FormManagerCatigories";
             this.Load += new System.EventHandler(this.FormManagerCatigories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,13 +335,8 @@
 
         #endregion
         private SimpleInventoryManagementDataSet simpleInventoryManagementDataSet;
-        private System.Windows.Forms.DataGridView productsViewDataGridView;
         private System.Windows.Forms.BindingSource categoriesBindingSource;
         private SimpleInventoryManagementDataSetTableAdapters.CategoriesTableAdapter categoriesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn parentCategoryIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private RJButton rjButtonREP;
         private System.Windows.Forms.ComboBox comboBox;
         private RJButton ButtonFIllter;
@@ -374,5 +349,10 @@
         private RJButton rjButtonSave;
         private RJButton rjButton2;
         private SimpleInventoryManagementDataSetTableAdapters.CategoriesTableAdapter categoriesTableAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parentCategoryIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
     }
 }

@@ -31,12 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.rjButtonSave = new Simple_Inventory_Management.RJButton();
             this.rjButton2 = new Simple_Inventory_Management.RJButton();
-            this.comboBox = new System.Windows.Forms.ComboBox();
-            this.ButtonFIllter = new Simple_Inventory_Management.RJButton();
             this.ButtonFind = new Simple_Inventory_Management.RJButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.labelFiltering = new System.Windows.Forms.Label();
             this.labelSearch = new System.Windows.Forms.Label();
             this.ButtonClose = new Simple_Inventory_Management.RJButton();
             this.usersTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter();
@@ -100,41 +97,6 @@
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
-            // comboBox
-            // 
-            this.comboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Items.AddRange(new object[] {
-            "=",
-            "-",
-            "+"});
-            this.comboBox.Location = new System.Drawing.Point(111, 377);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(173, 24);
-            this.comboBox.TabIndex = 67;
-            // 
-            // ButtonFIllter
-            // 
-            this.ButtonFIllter.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonFIllter.BackgroundColor = System.Drawing.Color.Transparent;
-            this.ButtonFIllter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.BorderRadius = 6;
-            this.ButtonFIllter.BorderSize = 2;
-            this.ButtonFIllter.FlatAppearance.BorderSize = 0;
-            this.ButtonFIllter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonFIllter.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonFIllter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.Location = new System.Drawing.Point(290, 370);
-            this.ButtonFIllter.Name = "ButtonFIllter";
-            this.ButtonFIllter.Size = new System.Drawing.Size(97, 32);
-            this.ButtonFIllter.TabIndex = 66;
-            this.ButtonFIllter.Text = "FILLTER";
-            this.ButtonFIllter.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.UseVisualStyleBackColor = false;
-            this.ButtonFIllter.Click += new System.EventHandler(this.ButtonFIllter_Click);
-            // 
             // ButtonFind
             // 
             this.ButtonFind.BackColor = System.Drawing.Color.Transparent;
@@ -173,17 +135,6 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(174, 17);
             this.textBoxSearch.TabIndex = 64;
-            // 
-            // labelFiltering
-            // 
-            this.labelFiltering.AutoSize = true;
-            this.labelFiltering.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFiltering.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.labelFiltering.Location = new System.Drawing.Point(8, 377);
-            this.labelFiltering.Name = "labelFiltering";
-            this.labelFiltering.Size = new System.Drawing.Size(96, 17);
-            this.labelFiltering.TabIndex = 62;
-            this.labelFiltering.Text = "FILTERING:";
             // 
             // labelSearch
             // 
@@ -323,12 +274,9 @@
             this.Controls.Add(this.documentTypesDataGridView);
             this.Controls.Add(this.rjButtonSave);
             this.Controls.Add(this.rjButton2);
-            this.Controls.Add(this.comboBox);
-            this.Controls.Add(this.ButtonFIllter);
             this.Controls.Add(this.ButtonFind);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.labelFiltering);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.ButtonClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -348,12 +296,9 @@
 
         private RJButton rjButtonSave;
         private RJButton rjButton2;
-        private System.Windows.Forms.ComboBox comboBox;
-        private RJButton ButtonFIllter;
         private RJButton ButtonFind;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Label labelFiltering;
         private System.Windows.Forms.Label labelSearch;
         private RJButton ButtonClose;
         private SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter usersTableAdapter;

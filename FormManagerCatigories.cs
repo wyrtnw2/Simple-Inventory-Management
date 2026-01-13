@@ -38,14 +38,14 @@ namespace Simple_Inventory_Management
 
         private void ButtonFind_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < productsViewDataGridView.RowCount; i++)
+            for (int i = 0; i < dataGridView1.RowCount; i++)
             {
-                productsViewDataGridView.Rows[i].Selected = false;
-                for (int j = 0; j < productsViewDataGridView.ColumnCount; j++)
-                    if (productsViewDataGridView.Rows[i].Cells[j].Value != null)
-                        if (productsViewDataGridView.Rows[i].Cells[j].Value.ToString().Contains(textBoxSearch.Text))
+                dataGridView1.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBoxSearch.Text))
                         {
-                            productsViewDataGridView.Rows[i].Selected = true;
+                            dataGridView1.Rows[i].Selected = true;
                             break;
                         }
             }
@@ -64,7 +64,7 @@ namespace Simple_Inventory_Management
         private void rjButtonREP_Click(object sender, EventArgs e)
         {
             DGVPrinter dgvPrinter = new DGVPrinter();
-            dgvPrinter.CreateReport("Отчет по категориям", productsViewDataGridView);
+            dgvPrinter.CreateReport("Отчет по категориям", dataGridView1);
         }
     }
 }

@@ -29,104 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.productsViewDataGridView = new System.Windows.Forms.DataGridView();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
+            this.usersTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter();
+            this.rjButtonSave = new Simple_Inventory_Management.RJButton();
+            this.rjButton2 = new Simple_Inventory_Management.RJButton();
+            this.ButtonFind = new Simple_Inventory_Management.RJButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.ButtonClose = new Simple_Inventory_Management.RJButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.usersIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.simpleInventoryManagementDataSet = new Simple_Inventory_Management.SimpleInventoryManagementDataSet();
-            this.usersTableAdapter = new Simple_Inventory_Management.SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter();
-            this.rjButtonSave = new Simple_Inventory_Management.RJButton();
-            this.rjButton2 = new Simple_Inventory_Management.RJButton();
-            this.comboBox = new System.Windows.Forms.ComboBox();
-            this.ButtonFIllter = new Simple_Inventory_Management.RJButton();
-            this.ButtonFind = new Simple_Inventory_Management.RJButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.labelFiltering = new System.Windows.Forms.Label();
-            this.labelSearch = new System.Windows.Forms.Label();
-            this.ButtonClose = new Simple_Inventory_Management.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productsViewDataGridView
-            // 
-            this.productsViewDataGridView.AllowUserToAddRows = false;
-            this.productsViewDataGridView.AllowUserToDeleteRows = false;
-            this.productsViewDataGridView.AllowUserToOrderColumns = true;
-            this.productsViewDataGridView.AllowUserToResizeColumns = false;
-            this.productsViewDataGridView.AllowUserToResizeRows = false;
-            this.productsViewDataGridView.AutoGenerateColumns = false;
-            this.productsViewDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.productsViewDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productsViewDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.productsViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.usersIDDataGridViewTextBoxColumn,
-            this.roleDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.fullNameDataGridViewTextBoxColumn});
-            this.productsViewDataGridView.DataSource = this.usersBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Orbitron Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.productsViewDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
-            this.productsViewDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productsViewDataGridView.EnableHeadersVisualStyles = false;
-            this.productsViewDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(116)))), ((int)(((byte)(88)))));
-            this.productsViewDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.productsViewDataGridView.Name = "productsViewDataGridView";
-            this.productsViewDataGridView.Size = new System.Drawing.Size(611, 305);
-            this.productsViewDataGridView.TabIndex = 4;
-            // 
-            // usersIDDataGridViewTextBoxColumn
-            // 
-            this.usersIDDataGridViewTextBoxColumn.DataPropertyName = "UsersID";
-            this.usersIDDataGridViewTextBoxColumn.HeaderText = "UsersID";
-            this.usersIDDataGridViewTextBoxColumn.Name = "usersIDDataGridViewTextBoxColumn";
-            this.usersIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "role";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // fullNameDataGridViewTextBoxColumn
-            // 
-            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
             // 
             // usersBindingSource
             // 
@@ -182,51 +105,6 @@
             this.rjButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.rjButton2.UseVisualStyleBackColor = false;
             // 
-            // comboBox
-            // 
-            this.comboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Items.AddRange(new object[] {
-            "Электроника",
-            "Компьютеры и ноутбуки",
-            "Комплектующие для ПК",
-            "Периферия",
-            "Офисная техника",
-            "Принтеры и МФУ",
-            "Канцелярия",
-            "Бумажная продукция",
-            "Письменные принадлежности",
-            "Хозяйственные товары",
-            "Бытовая химия",
-            "Мебель",
-            "Продукты питания",
-            "Напитки"});
-            this.comboBox.Location = new System.Drawing.Point(111, 367);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(173, 24);
-            this.comboBox.TabIndex = 55;
-            // 
-            // ButtonFIllter
-            // 
-            this.ButtonFIllter.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonFIllter.BackgroundColor = System.Drawing.Color.Transparent;
-            this.ButtonFIllter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.BorderRadius = 6;
-            this.ButtonFIllter.BorderSize = 2;
-            this.ButtonFIllter.FlatAppearance.BorderSize = 0;
-            this.ButtonFIllter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonFIllter.Font = new System.Drawing.Font("Orbitron SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonFIllter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.Location = new System.Drawing.Point(290, 360);
-            this.ButtonFIllter.Name = "ButtonFIllter";
-            this.ButtonFIllter.Size = new System.Drawing.Size(97, 32);
-            this.ButtonFIllter.TabIndex = 54;
-            this.ButtonFIllter.Text = "FILLTER";
-            this.ButtonFIllter.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.ButtonFIllter.UseVisualStyleBackColor = false;
-            // 
             // ButtonFind
             // 
             this.ButtonFind.BackColor = System.Drawing.Color.Transparent;
@@ -245,6 +123,7 @@
             this.ButtonFind.Text = "FIND";
             this.ButtonFind.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonFind.UseVisualStyleBackColor = false;
+            this.ButtonFind.Click += new System.EventHandler(this.ButtonFind_Click_1);
             // 
             // panel2
             // 
@@ -264,17 +143,6 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(174, 17);
             this.textBoxSearch.TabIndex = 52;
-            // 
-            // labelFiltering
-            // 
-            this.labelFiltering.AutoSize = true;
-            this.labelFiltering.Font = new System.Drawing.Font("Orbitron SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFiltering.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
-            this.labelFiltering.Location = new System.Drawing.Point(8, 367);
-            this.labelFiltering.Name = "labelFiltering";
-            this.labelFiltering.Size = new System.Drawing.Size(96, 17);
-            this.labelFiltering.TabIndex = 50;
-            this.labelFiltering.Text = "FILTERING:";
             // 
             // labelSearch
             // 
@@ -307,56 +175,103 @@
             this.ButtonClose.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(24)))), ((int)(((byte)(5)))));
             this.ButtonClose.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.usersIDDataGridViewTextBoxColumn,
+            this.roleDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.fullNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.usersBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(-3, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(617, 319);
+            this.dataGridView1.TabIndex = 59;
+            // 
+            // usersIDDataGridViewTextBoxColumn
+            // 
+            this.usersIDDataGridViewTextBoxColumn.DataPropertyName = "UsersID";
+            this.usersIDDataGridViewTextBoxColumn.HeaderText = "UsersID";
+            this.usersIDDataGridViewTextBoxColumn.Name = "usersIDDataGridViewTextBoxColumn";
+            this.usersIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roleDataGridViewTextBoxColumn
+            // 
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "role";
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // fullNameDataGridViewTextBoxColumn
+            // 
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            // 
             // FormAdminUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(611, 413);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rjButtonSave);
             this.Controls.Add(this.rjButton2);
-            this.Controls.Add(this.comboBox);
-            this.Controls.Add(this.ButtonFIllter);
             this.Controls.Add(this.ButtonFind);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.labelFiltering);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.ButtonClose);
-            this.Controls.Add(this.productsViewDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAdminUsers";
             this.Text = "FormAdminUsers";
             this.Load += new System.EventHandler(this.FormAdminUsers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productsViewDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleInventoryManagementDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView productsViewDataGridView;
         private SimpleInventoryManagementDataSet simpleInventoryManagementDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private SimpleInventoryManagementDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private RJButton rjButtonSave;
+        private RJButton rjButton2;
+        private RJButton ButtonFind;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label labelSearch;
+        private RJButton ButtonClose;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn usersIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
-        private RJButton rjButtonSave;
-        private RJButton rjButton2;
-        private System.Windows.Forms.ComboBox comboBox;
-        private RJButton ButtonFIllter;
-        private RJButton ButtonFind;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Label labelFiltering;
-        private System.Windows.Forms.Label labelSearch;
-        private RJButton ButtonClose;
     }
 }
