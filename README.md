@@ -1,7 +1,7 @@
 
 # Description/Описание
 > --------------------------------------------------------------------------------------------------------------------------------
-> # **Functional:**
+> # **Functional: **
 >> 1. Nomenclature: a product directory with the article, name, category, unit of measurement, and minimum balance.
 >> 2. Warehouses: accounting by warehouses/storage locations.
 >> 3. Document management:*** registration (invoice), write-off (expense), inventory.
